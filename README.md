@@ -29,33 +29,32 @@ This repository focuses on:
 
 ## Repository structure
 
-.
+## Repository structure
+
+```text
+NuCLR_DNA/
 ├── lib/
 │   ├── model.py              # Neural network architecture and embeddings
-│   ├── data.py               # Nuclear dataset loading and preprocessing
-│   ├── symbolic_model.py     # Reference symbolic models (BW, WS4, etc.)
-│   └── utils.py              # Shared utilities
-│
+│   ├── utils.py              # Shared utilities
+│   └── symbolic_model.py     # Reference symbolic models (BW, WS4, etc.)
 ├── scripts/
-│   ├── exps/                     # Experiment-specific configs / presets
-│   ├── __init__.py               # Makes scripts a Python module
-│   ├── multiruns.py              # Launches multiple runs (e.g. seeds / configs)
-│   ├── pipeline.py               # High-level training + plotting entry point
-│   ├── plot.py                   # Standalone plotting utilities
-│   ├── run_pysr.py               # Symbolic regression with PySR
-│   ├── symbolic_regression.py    # Post-hoc symbolic fits to learned functions
-│   └── train.py                  # Core training loop
-│
+│   ├── exps/                 # Experiment-specific configs
+│   ├── multiruns.py          # Launch multiple runs (seeds / configs)
+│   ├── pipeline.py           # High-level training + plotting entry point
+│   ├── plot.py               # Standalone plotting utilities
+│   └── run_pysr.py           # Symbolic regression with PySR
 ├── notebooks/
-│   ├── training.ipynb        # Training loop with embedding snapshots
-│
+│   └── training.ipynb        # Training loop with embedding snapshots
 ├── experiments/
-│   └── <experim#ent_name>/    # Saved models, PCA snapshots, plots
-│
-├── data/                     # Datasets of nuclear observables
-│
+│   └── <experiment_name>/    # Saved models, PCA snapshots, plots
+├── data/
+│   └── ...                   # Datasets of nuclear observables
+├── data.py                   # Dataset loading & preprocessing
+├── train.py                  # Core training loop
+├── symbolic_regression.py    # Post-hoc symbolic fits
 ├── requirements.txt
 └── README.md
+
 
 ---
 
