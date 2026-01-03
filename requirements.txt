@@ -1,0 +1,11 @@
+torch
+matplotlib
+seaborn
+scikit-learn
+mup
+pandas
+plotly
+neuraloperator
+ipywidgets
+tqdm
+pyyaml
