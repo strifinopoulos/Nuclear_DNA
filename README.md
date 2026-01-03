@@ -29,8 +29,6 @@ This repository focuses on:
 
 ## Repository structure
 
-## Repository structure
-
 ```text
 NuCLR_DNA/
 ├── lib/
