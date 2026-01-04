@@ -9,3 +9,5 @@ neuraloperator
 ipywidgets
 tqdm
 pyyaml
+numpy
+scipy
