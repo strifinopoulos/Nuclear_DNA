@@ -25,6 +25,11 @@ This repository focuses on:
 - Fitting low-dimensional geometric structures (e.g. helices) to embeddings
 - Studying how embedding geometry affects physical predictions
 
+We saw in the penultimate layers of this model that it had learned to factorize
+microcorrections to the binding energy for discrete value of N and Z. There are 
+examples of the different levels of these corrections, which we call Jaffe 
+factorization, that we discuss in the paper as well. 
+
 ---
 
 ## Repository structure
@@ -32,24 +37,25 @@ This repository focuses on:
 ```text
 NuCLR_DNA/
 ├── lib/
-│   ├── model.py              # Neural network architecture and embeddings
-│   ├── utils.py              # Shared utilities
-│   └── symbolic_model.py     # Reference symbolic models (BW, WS4, etc.)
+│   ├── model.py                  # Neural network architecture and embeddings
+│   ├── utils.py                  # Shared utilities
+│   └── symbolic_model.py         # Reference symbolic models (BW, WS4, etc.)
 ├── scripts/
-│   ├── exps/                 # Experiment-specific configs
-│   ├── multiruns.py          # Launch multiple runs (seeds / configs)
-│   ├── pipeline.py           # High-level training + plotting entry point
-│   ├── plot.py               # Standalone plotting utilities
-│   └── run_pysr.py           # Symbolic regression with PySR
+│   ├── exps/                     # Experiment-specific configs
+│   ├── multiruns.py              # Launch multiple runs (seeds / configs)
+│   ├── pipeline.py               # High-level training + plotting entry point
+│   ├── plot.py                   # Standalone plotting utilities
+│   └── run_pysr.py               # Symbolic regression with PySR
 ├── notebooks/
-│   └── training.ipynb        # Training loop with embedding snapshots
+│   └── training.ipynb            # Training loop with embedding snapshots
+|   └── fitting_examples.ipynb    # Examples of Jaffe factorization on WS4 and our symbolic model
 ├── experiments/
-│   └── <experiment_name>/    # Saved models, PCA snapshots, plots
+│   └── <experiment_name>/        # Saved models, PCA snapshots, plots
 ├── data/
-│   └── ...                   # Datasets of nuclear observables
-├── data.py                   # Dataset loading & preprocessing
-├── train.py                  # Core training loop
-├── symbolic_regression.py    # Post-hoc symbolic fits
+│   └── ...                       # Datasets of nuclear observables
+├── data.py                       # Dataset loading & preprocessing
+├── train.py                      # Core training loop
+├── symbolic_regression.py        # Post-hoc symbolic fits
 ├── requirements.txt
 └── README.md
 ```
