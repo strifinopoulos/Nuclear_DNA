@@ -141,7 +141,9 @@ class PlottingContext:
             plt.xlabel("Index")
             plt.ylabel(f"PC {i}")
 
-            plt.colorbar(sm, label=f"PC {i + 1}")
+            fig = plt.gcf()
+            ax = plt.gca()
+            fig.colorbar(sm, ax=ax, label=f"PC {i + 1}")
 
         fig.tight_layout()
         return fig
